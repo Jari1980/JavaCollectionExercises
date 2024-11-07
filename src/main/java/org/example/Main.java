@@ -1,7 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +13,9 @@ public class Main {
                     case 1:
                         exercise1();
                         break;
+                    case 2:
+                        exercise2();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -25,6 +27,29 @@ public class Main {
             }
         }
     }
+    public static void exercise2(){
+        System.out.println("Creating List list of type string with 3 broccolis: ");
+        List<String> list = new ArrayList<String>();
+        list.add("SuperBroccoli");
+        list.add("GoodBroccoli");
+        list.add("GreenBroccoli");
+        System.out.println("Each element in list: ");
+        for(String element : list){
+            System.out.println(element);
+        }
+        System.out.println("Adding \"123Broccoli\" to element 2 :");
+        list.add(2, "123Broccoli");
+        for(String element : list){
+            System.out.println(element);
+        }
+        System.out.println("Sorting list in a new sortedList: ");
+        List<String> sortedList = list.stream().sorted().toList();
+        for(String element : sortedList){
+            System.out.println(element);
+        }
+        System.out.println("-------------");
+    }
+
     public static void exercise1(){
         System.out.println("Creating a array list, arrList, of type string: ");
         ArrayList<String> arrList = new ArrayList<>();
